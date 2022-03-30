@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Weight Prediction</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body style="background: rgb(0, 0, 0);">
+ <div class="login">
+	<h1>Weight Prediction</h1>
+  <small> Encoded to take in integer input for species. <br>
+  Bream=0, Parkki=1, Perch=2, Pike=3, Roach=4, Smelt=5, Whitefish=6 </small>
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="species" placeholder="species" required="required" />
+        <input type="text" name="length1" placeholder="length1" required="required" />
+		<input type="text" name="length2" placeholder="length2" required="required" />
+        <input type="text" name="length3" placeholder="length3" required="required" />
+        <input type="text" name="height" placeholder="height" required="required" />
+		<input type="text" name="width" placeholder="width" required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict weight of fish</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+</body>
+</html>
