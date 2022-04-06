@@ -8,5 +8,3 @@ Using html/css, a frontend webpage was developed which allows for inputs to be p
 Flask was the webframework used in building this application.
 
 The model is being hosted on Heroku and can be found here... https://fishdata-ml.herokuapp.com/
-
-![image](https://user-images.githubusercontent.com/93953839/162025562-258e19a3-5ef2-4833-9ebf-2f5d85ff1dc4.png)
